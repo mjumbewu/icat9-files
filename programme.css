@@ -1,0 +1,172 @@
+/* Old styles
+.timeslot {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    margin-bottom: 0.5rem;
+}
+
+.timeslot .events {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.timeslot .events .title {
+    display: block;
+    width: 100%;
+    background-color: #59bebe;
+    color: white;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    margin: 0.25rem;
+    text-align: center;
+}
+
+.timeslot .events .keynote { background: #dd052b; }
+.timeslot .events .opening { background: #eb5d0f; }
+.timeslot .events .paper-session { background: #114e90; }
+.timeslot .events .student-session { background: #36a4dd; }
+
+.timeslot .events .title:empty {
+    background: transparent;
+}
+
+.timeslot .times {
+    display: block;
+    width: 25rem;
+    max-width: 50%;
+    font-weight: bold;
+}
+
+*/
+
+.event .title {
+  display: flex;
+  background-color: silver;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  margin: 0.25rem;
+}
+
+.event time {
+  font-style: italic;
+}
+
+.time-label {
+  display: none;
+}
+
+.event.workshop .title { background: #124f8f; color: white; }
+.event.keynote .title { background: #dd052b; color: white; }
+.event.opening .title { background: #eb5d0f; color: white; }
+.event.paper-session .title { background: #5abebe; color: white; }
+.event.student-session .title { background: #36a4dd; color: white; }
+
+@supports (display: grid) {
+  .programme {
+    display: grid;
+    grid-gap: 0.25rem;
+    grid-template-rows: [t0900] 3rem
+                        [t1000] 3rem
+                        [t1100] 3rem
+                        [t1200] 3rem
+                        [t1300] 3rem
+                        [t1400] 3rem
+                        [t1500] 3rem
+                        [t1600] 3rem
+                        [t1700] 3rem
+                        [t1800] 3rem
+                        [t1900] 3rem
+                        [t2000] 3rem
+                        [t2100];
+  }
+
+  .two-tracks {
+    grid-template-columns:
+      [times_start] 5rem [times_end tech_fair_start] 2rem [tech_fair_end tracks_start track1_start] 1fr [track1_end track2_start] 1fr [track2_end tracks_end];
+  }
+
+  .three-tracks {
+    grid-template-columns:
+      [times_start] 5rem [times_end tech_fair_start] 2rem [tech_fair_end tracks_start track1_start] 1fr [track1_end track2_start] 1fr [track2_end track3_start] 1fr [track3_end tracks_end];
+  }
+
+  .four-tracks {
+    grid-template-columns:
+      [times_start] 5rem [times_end tech_fair_start] 2rem [tech_fair_end tracks_start track1_start] 1fr [track1_end track2_start] 1fr [track2_end track3_start] 1fr [track3_end track4_start] 1fr [track4_end tracks_end];
+  }
+
+  .time-label {
+    display: inline;
+    border-top: 1px solid silver;
+    grid-column-start: times_start;
+    grid-column-end: times_end;
+  }
+
+  .t-start-0900 { grid-row-start: t0900; }
+  .t-start-1000 { grid-row-start: t1000; }
+  .t-start-1100 { grid-row-start: t1100; }
+  .t-start-1200 { grid-row-start: t1200; }
+  .t-start-1300 { grid-row-start: t1300; }
+  .t-start-1400 { grid-row-start: t1400; }
+  .t-start-1500 { grid-row-start: t1500; }
+  .t-start-1600 { grid-row-start: t1600; }
+  .t-start-1700 { grid-row-start: t1700; }
+  .t-start-1800 { grid-row-start: t1800; }
+  .t-start-1900 { grid-row-start: t1900; }
+  .t-start-2000 { grid-row-start: t2000; }
+
+  .t-end-0900 { grid-row-end: t0900; }
+  .t-end-1000 { grid-row-end: t1000; }
+  .t-end-1100 { grid-row-end: t1100; }
+  .t-end-1200 { grid-row-end: t1200; }
+  .t-end-1300 { grid-row-end: t1300; }
+  .t-end-1400 { grid-row-end: t1400; }
+  .t-end-1500 { grid-row-end: t1500; }
+  .t-end-1600 { grid-row-end: t1600; }
+  .t-end-1700 { grid-row-end: t1700; }
+  .t-end-1800 { grid-row-end: t1800; }
+  .t-end-1900 { grid-row-end: t1900; }
+  .t-end-2000 { grid-row-end: t2000; }
+
+  .t-0900 { grid-row: t0900 / t1000; }
+  .t-1000 { grid-row: t1000 / t1100; }
+  .t-1100 { grid-row: t1100 / t1200; }
+  .t-1200 { grid-row: t1200 / t1300; }
+  .t-1300 { grid-row: t1300 / t1400; }
+  .t-1400 { grid-row: t1400 / t1500; }
+  .t-1500 { grid-row: t1500 / t1600; }
+  .t-1600 { grid-row: t1600 / t1700; }
+  .t-1700 { grid-row: t1700 / t1800; }
+  .t-1800 { grid-row: t1800 / t1900; }
+  .t-1900 { grid-row: t1900 / t2000; }
+  .t-2000 { grid-row: t2000 / t2100; }
+
+  .break, .keynote, .opening { grid-column: tracks_start / tracks_end; }
+  .no-track-1  { grid-column-start: track2_start; }
+
+  .track-1 { grid-column: track1_start / track1_end; }
+  .track-2 { grid-column: track2_start / track2_end; }
+  .track-3 { grid-column: track3_start / track3_end; }
+  .track-4 { grid-column: track4_start / track4_end; }
+
+  .tech-fair-track {
+    grid-column: tech_fair_start  / tech_fair_end;
+    writing-mode: vertical-rl;
+  }
+
+  .event .title {
+    height: 100%;
+    margin: 0;
+  }
+
+  .event time {
+    display: none;
+  }
+}
