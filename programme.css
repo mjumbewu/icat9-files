@@ -72,18 +72,18 @@
   .programme {
     display: grid;
     grid-gap: 0.25rem;
-    grid-template-rows: [t0900] 3rem
-                        [t1000] 3rem
-                        [t1100] 3rem
-                        [t1200] 3rem
-                        [t1300] 3rem
-                        [t1400] 3rem
-                        [t1500] 3rem
-                        [t1600] 3rem
-                        [t1700] 3rem
-                        [t1800] 3rem
-                        [t1900] 3rem
-                        [t2000] 3rem
+    grid-template-rows: [t0900] 1fr
+                        [t1000] 1fr
+                        [t1100] 1fr
+                        [t1200] 1fr
+                        [t1300] 1fr
+                        [t1400] 1fr
+                        [t1500] 1fr
+                        [t1600] 1fr
+                        [t1700] 1fr
+                        [t1800] 1fr
+                        [t1900] 1fr
+                        [t2000] 1fr
                         [t2100];
   }
 
@@ -107,6 +107,7 @@
     border-top: 1px solid silver;
     grid-column-start: times_start;
     grid-column-end: times_end;
+    font-size: 1rem;
   }
 
   .t-start-0900 { grid-row-start: t0900; }
