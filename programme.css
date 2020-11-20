@@ -42,16 +42,20 @@
 
 */
 
-.event .title {
+.event {
   display: flex;
   background-color: silver;
   border-radius: 5px;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0.5rem;
   box-sizing: border-box;
-  margin: 0.25rem;
+}
+
+.event .title {
+  display: block;
+  flex-grow: 1;
+  padding: 0.5rem;
 }
 
 .event time {
@@ -62,11 +66,34 @@
   display: none;
 }
 
-.event.workshop .title { background: #124f8f; color: white; }
-.event.keynote .title { background: #dd052b; color: white; }
-.event.opening .title { background: #eb5d0f; color: white; }
-.event.paper-session .title { background: #5abebe; color: white; }
-.event.student-session .title { background: #36a4dd; color: white; }
+.event.workshop { background: #124f8f; color: white; }
+.event.keynote { background: #dd052b; color: white; }
+.event.opening { background: #eb5d0f; color: white; }
+.event.paper-session { background: #5abebe; color: white; }
+.event.student-session { background: #36a4dd; color: white; }
+
+.event .action {
+  align-self: stretch;
+  width: 2rem;
+  border-left: 1px solid white;
+  border-color: rgba(255,255,255,0.5);
+  padding: 0.5rem;
+  flex-grow: 0;
+  font-size: 0;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(255,255,255,0.1);
+  transition: background-color 0.1s linear;
+}
+
+.event .action:hover {
+  background-color: rgba(0,0,0,0.25);
+}
+
+.event .enter::after {
+  font-size: 2rem;
+  content: '\2386';
+}
 
 @supports (display: grid) {
   .programme {
