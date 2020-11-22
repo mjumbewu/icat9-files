@@ -57,9 +57,12 @@ h3 {
 }
 
 .event .title {
-  display: block;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 0.5rem;
+  font-weight: 600;
 }
 
 .event time {
@@ -77,6 +80,9 @@ h3 {
 .event.student-session { background: #36a4dd; color: white; }
 
 .event .action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-self: stretch;
   width: 6rem;
   border-left: 1px solid white;
