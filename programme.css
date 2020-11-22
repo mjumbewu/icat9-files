@@ -74,7 +74,7 @@
 
 .event .action {
   align-self: stretch;
-  width: 2rem;
+  width: 6rem;
   border-left: 1px solid white;
   border-color: rgba(255,255,255,0.5);
   padding: 0.5rem;
@@ -91,7 +91,7 @@
 }
 
 .event .enter::after {
-  font-size: 2rem;
+  font-size: 3rem;
   content: '\2386';
 }
 
@@ -176,7 +176,14 @@
   .t-1900 { grid-row: t1900 / t2000; }
   .t-2000 { grid-row: t2000 / t2100; }
 
-  .break, .keynote, .opening { grid-column: tracks_start / tracks_end; }
+  /* Split these out because of an apparent bug in Joomla dynamic CSS transform,
+   * where it'll take the element in question and add a space before the first
+   * class (.break), but not the ones following the commas.
+   */
+  .break { grid-column: tracks_start / tracks_end; }
+  .keynote { grid-column: tracks_start / tracks_end; }
+  .opening { grid-column: tracks_start / tracks_end; }
+
   .no-track-1  { grid-column-start: track2_start; }
 
   .track-1 { grid-column: track1_start / track1_end; }
