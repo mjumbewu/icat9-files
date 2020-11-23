@@ -105,6 +105,10 @@ h3 {
   content: '\2386';
 }
 
+.paper-session .enter {
+  font-size: 1rem;
+}
+
 @supports (display: grid) {
   .programme {
     display: grid;
@@ -194,7 +198,8 @@ h3 {
   .keynote { grid-column: tracks_start / tracks_end; }
   .opening { grid-column: tracks_start / tracks_end; }
 
-  .no-track-1  { grid-column-start: track2_start; }
+  .all-tracks { grid-column: track1_start / -1; }
+  .no-track-1  { grid-column: track2_start / -1; }
 
   .track-1 { grid-column: track1_start / track1_end; }
   .track-2 { grid-column: track2_start / track2_end; }
