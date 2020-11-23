@@ -102,11 +102,13 @@ h3 {
 
 .event .enter::after {
   font-size: 3rem;
+  font-weight: 300;
   content: '\2386';
 }
 
 .paper-session .enter {
   font-size: 1rem;
+  font-weight:600;
 }
 
 @supports (display: grid) {
