@@ -111,6 +111,17 @@ h3 {
   font-weight:600;
 }
 
+.tech-fair-track .title {
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.1s linear;
+}
+
+.tech-fair-track .title:hover {
+  background-color: #aaa;
+  text-decoration: underline;
+}
+
 @supports (display: grid) {
   .programme {
     display: grid;
