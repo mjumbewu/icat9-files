@@ -112,14 +112,22 @@ h3 {
 }
 
 .tech-fair-track .title {
-  color: white;
+  color: black;
   text-decoration: none;
   transition: background-color 0.1s linear;
 }
 
 .tech-fair-track .title:hover {
-  background-color: #aaa;
-  text-decoration: underline;
+  background-color: #ddd;
+}
+
+@media (min-width: 600px) {
+  .tech-fair-track .title::after {
+    font-size: 3rem;
+    font-weight: 300;
+    content: '\2386';
+    /* color: white; */
+  }
 }
 
 @supports (display: grid) {
@@ -154,6 +162,23 @@ h3 {
   .four-tracks {
     grid-template-columns:
       [times_start] 5rem [times_end tech_fair_start] 2rem [tech_fair_end tracks_start track1_start] 1fr [track1_end track2_start] 1fr [track2_end track3_start] 1fr [track3_end track4_start] 1fr [track4_end tracks_end];
+  }
+
+  @media (min-width: 600px) {
+    .two-tracks {
+      grid-template-columns:
+        [times_start] 5rem [times_end tech_fair_start] 9rem [tech_fair_end tracks_start track1_start] 1fr [track1_end track2_start] 1fr [track2_end tracks_end];
+    }
+
+    .three-tracks {
+      grid-template-columns:
+        [times_start] 5rem [times_end tech_fair_start] 9rem [tech_fair_end tracks_start track1_start] 1fr [track1_end track2_start] 1fr [track2_end track3_start] 1fr [track3_end tracks_end];
+    }
+
+    .four-tracks {
+      grid-template-columns:
+        [times_start] 5rem [times_end tech_fair_start] 9rem [tech_fair_end tracks_start track1_start] 1fr [track1_end track2_start] 1fr [track2_end track3_start] 1fr [track3_end track4_start] 1fr [track4_end tracks_end];
+    }
   }
 
   .time-label {
